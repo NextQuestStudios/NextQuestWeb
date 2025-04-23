@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Sprite Editor – Next Quest Studio</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <img src="../../assets/images/logo.png" alt="Next Quest Studio Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="../index.html">Dashboard</a></li>
+        <li><a href="../users.html">User Management</a></li>
+        <li><a href="sprite-editor.html">Sprite Editor</a></li>
+        <li><a href="../../profile.html">My Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section dark" style="padding-top: 140px;">
+    <h1>Advanced Sprite Editor</h1>
+    <p>Fully customize and animate LPC-based characters for Eternal Fall.</p>
+
+    <div style="display: flex; gap: 40px; flex-wrap: wrap; justify-content: space-between;">
+      <!-- LEFT: Preview -->
+      <div style="text-align: center;">
+        <canvas id="spriteCanvas" width="64" height="64" style="background: #222; border: 1px solid #555;"></canvas>
+        <div style="margin-top: 10px;">
+          <label>Animation</label>
+          <select id="animationSelect">
+            <option value="idle">Idle</option>
+            <option value="walk">Walk</option>
+            <option value="slash">Melee Attack</option>
+            <option value="cast">Cast Spell</option>
+            <option value="sit">Sit</option>
+            <option value="run">Run</option>
+            <option value="jump">Jump</option>
+          </select>
+
+          <label>Direction</label>
+          <select id="directionSelect">
+            <option value="0">Down</option>
+            <option value="1">Left</option>
+            <option value="2">Right</option>
+            <option value="3">Up</option>
+          </select>
+        </div>
+        <button class="btn secondary" id="playButton">Play Animation</button>
+      </div>
+
+      <!-- RIGHT: Customization Controls -->
+      <div>
+        <form id="spriteForm">
+          <label>Body Type</label>
+          <select id="bodySelect"></select>
+
+          <label>Head Type</label>
+          <select id="headSelect"></select>
+
+          <label>Hair Style</label>
+          <select id="hairSelect"></select>
+
+          <label>Hair Color</label>
+          <select id="hairColorSelect"></select>
+
+          <label>Facial Hair</label>
+          <select id="beardSelect"></select>
+
+          <label>Headgear</label>
+          <select id="headgearSelect"></select>
+
+          <label>Torso Armor</label>
+          <select id="torsoSelect"></select>
+
+          <label>Gloves</label>
+          <select id="glovesSelect"></select>
+
+          <label>Pants</label>
+          <select id="pantsSelect"></select>
+
+          <label>Boots</label>
+          <select id="bootsSelect"></select>
+
+          <label>Cloak</label>
+          <select id="cloakSelect"></select>
+
+          <label>Main Hand Weapon</label>
+          <select id="weaponMainSelect"></select>
+
+          <label>Off Hand / Shield</label>
+          <select id="weaponOffSelect"></select>
+
+          <label>Additional Effects</label>
+          <select id="extraSelect"></select>
+
+          <hr />
+
+          <label>Sprite Name</label>
+          <input type="text" id="spriteName" placeholder="E.g. 'Dark Elf Archer'" />
+
+          <label>Description</label>
+          <textarea id="spriteDesc" rows="3" placeholder="A fast-moving archer class..."></textarea>
+
+          <button class="btn primary" type="submit">Preview</button>
+          <button class="btn secondary" type="button" id="exportButton">Export Sprite</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Next Quest Studio – Sprite Editor Tool</p>
+  </footer>
+
+  <script type="module" src="../../js/sprite-editor.js"></script>
+</body>
+</html>
