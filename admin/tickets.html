@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Tickets – Next Quest Studio</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <img src="../assets/images/logo.png" class="logo" alt="Logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="users.html">Users</a></li>
+        <li><a href="messages.html">Messages</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section dark" style="padding-top: 140px;">
+    <h1>Support Tickets</h1>
+    <p>View all submitted support tickets below.</p>
+
+    <div class="news-card" style="max-width: 1000px; margin: 40px auto;">
+      <table style="width: 100%; text-align: left;">
+        <thead>
+          <tr>
+            <th style="padding-bottom: 10px;">Name</th>
+            <th>Email</th>
+            <th>Message</th>
+            <th>Submitted</th>
+          </tr>
+        </thead>
+        <tbody id="ticketTableBody">
+          <tr><td colspan="4">Loading tickets...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Admin Panel – Next Quest Studio</p>
+  </footer>
+
+  <script type="module">
+    import { db } from "../js/firebase-init.js";
+    import {
+      collection,
+      getDocs,
+      orderBy,
+      query
+    } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+
+    const ticketTableBody = document.getElementById("ticketTableBody");
+
+    async function loadTickets() {
+      ticketTableBody.innerHTML = "<tr><td colspan='4'>Loading...</td></tr>";
+      try {
+        const q = query(collection(db, "tickets"), orderBy("createdAt", "desc"));
+        const snapshot = await getDocs(q);
+
+        if (snapshot.empty) {
+          ticketTableBody.innerHTML = "<tr><td colspan='4'>No tickets yet.</td></tr>";
+          return;
+        }
+
+        ticketTableBody.innerHTML = "";
+        snapshot.forEach(doc => {
+          const ticket = doc.data();
+          const time = ticket.createdAt?.toDate().toLocaleString() || "N/A";
+          ticketTableBody.innerHTML += `
+            <tr>
+              <td>${ticket.name}</td>
+              <td>${ticket.email}</td>
+              <td>${ticket.message}</td>
+              <td>${time}</td>
+            </tr>
+          `;
+        });
+      } catch (err) {
+        ticketTableBody.innerHTML = `<tr><td colspan='4'>Error loading tickets: ${err.message}</td></tr>`;
+      }
+    }
+
+    loadTickets();
+  </script>
+</body>
+</html>

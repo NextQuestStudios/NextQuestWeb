@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Manager – Next Quest Studio</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">Next Quest Admin</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="content.html">Content</a></li>
+                <li><a href="users.html">Users</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Store Manager</h2>
+            <p>Add or update items available in the public store page.</p>
+
+            <form id="storeForm">
+                <label for="itemName">Item Name:</label><br>
+                <input type="text" id="itemName" name="itemName" required><br><br>
+
+                <label for="itemDesc">Description:</label><br>
+                <textarea id="itemDesc" name="itemDesc" rows="4" required></textarea><br><br>
+
+                <label for="itemPrice">Price (USD):</label><br>
+                <input type="number" step="0.01" id="itemPrice" name="itemPrice" required><br><br>
+
+                <label for="itemStatus">Status:</label><br>
+                <select id="itemStatus" name="itemStatus">
+                    <option value="active">Active</option>
+                    <option value="coming_soon">Coming Soon</option>
+                    <option value="disabled">Disabled</option>
+                </select><br><br>
+
+                <button type="submit" class="btn">Save Item</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Admin Panel – Next Quest Studio</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

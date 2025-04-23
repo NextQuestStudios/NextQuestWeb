@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Center – Next Quest Studio</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">Next Quest Admin</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="tickets.html">Support Tickets</a></li>
+                <li><a href="users.html">Users</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Message Center</h2>
+            <p>Use this space to communicate with other admins or respond to support messages.</p>
+
+            <div id="messageThread">
+                <div class="message">
+                    <p><strong>Arin (Admin):</strong> Don’t forget to review the latest beta testers’ bug reports.</p>
+                    <p class="timestamp">2025-04-18 11:02 AM</p>
+                </div>
+                <div class="message">
+                    <p><strong>Zed (Admin):</strong> Copy that — I’ll check the Tickets page next.</p>
+                    <p class="timestamp">2025-04-18 11:07 AM</p>
+                </div>
+            </div>
+
+            <form id="messageForm">
+                <label for="adminMessage">New Message:</label><br>
+                <textarea id="adminMessage" rows="4" required></textarea><br><br>
+                <button class="btn" type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Admin Panel – Next Quest Studio</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

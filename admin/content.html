@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Content Manager – Admin – Next Quest Studio</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <img src="../assets/images/logo.png" alt="Next Quest Studio Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="users.html">User Management</a></li>
+        <li><a href="store.html">Store Manager</a></li>
+        <li><a href="tickets.html">Support Tickets</a></li>
+        <li><a href="roles.html">Roles</a></li>
+        <li><a href="messages.html">Messages</a></li>
+        <li><a href="../profile.html">My Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section dark" style="padding-top: 140px;">
+    <h1>Content Manager</h1>
+    <p>Update site-wide announcements or featured homepage messages.</p>
+
+    <form id="contentForm" style="max-width: 600px; margin: 40px auto;">
+      <label for="homepageMessage">Homepage Announcement</label>
+      <textarea id="homepageMessage" rows="5" placeholder="Enter featured message here..."></textarea>
+
+      <label for="gameNotice">Game Page Alert</label>
+      <textarea id="gameNotice" rows="4" placeholder="Enter current development or patch note..."></textarea>
+
+      <button class="btn primary" type="submit">Save Content</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>Admin Panel – Next Quest Studio</p>
+  </footer>
+
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>
