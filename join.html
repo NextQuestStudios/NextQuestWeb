@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join the Team – Next Quest Studio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <img src="assets/images/logo.png" alt="Next Quest Studio Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="profile.html">My Profile</a></li>
+        <li id="adminNav" style="display: none;"><a href="admin/index.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section dark" style="padding-top: 140px;">
+    <h1>Join the Team</h1>
+    <p>Interested in helping shape Eternal Fall? Apply for testing or to contribute below.</p>
+
+    <form id="joinForm" class="contact-form" style="max-width: 600px; margin: 40px auto;">
+      <label for="joinName">Your Name</label>
+      <input type="text" id="joinName" name="name" required />
+
+      <label for="joinEmail">Your Email</label>
+      <input type="email" id="joinEmail" name="email" required />
+
+      <label for="joinRole">What Role Are You Interested In?</label>
+      <select id="joinRole" name="role" required>
+        <option value="">Select one</option>
+        <option value="tester">Pre-Alpha Tester</option>
+        <option value="developer">Game Developer</option>
+        <option value="artist">Pixel Artist</option>
+        <option value="writer">Quest/Story Writer</option>
+        <option value="moderator">Community Moderator</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="joinMessage">Tell Us Why You'd Like to Join</label>
+      <textarea id="joinMessage" name="message" rows="5" required></textarea>
+
+      <button class="btn primary" type="submit">Submit Application</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Next Quest Studio. We appreciate your passion!</p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

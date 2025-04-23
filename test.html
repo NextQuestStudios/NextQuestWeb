@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Firebase Test – Next Quest Studio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <main class="section dark" style="padding-top: 140px;">
+    <h1>Firebase Test</h1>
+    <p>This page checks if Firebase is working and displays the logged-in user info.</p>
+
+    <div id="output" class="news-card" style="max-width: 600px; margin: 40px auto;">
+      <p><strong>Status:</strong> <span id="status">Checking...</span></p>
+      <p><strong>Email:</strong> <span id="email">-</span></p>
+      <p><strong>UID:</strong> <span id="uid">-</span></p>
+    </div>
+  </main>
+
+  <script type="module">
+    import { auth } from './js/firebase-init.js';
+    import { onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js';
+
+    const statusEl = document.getElementById("status");
+    const emailEl = document.getElementById("email");
+    const uidEl = document.getElementById("uid");
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        statusEl.textContent = "Logged In";
+        emailEl.textContent = user.email;
+        uidEl.textContent = user.uid;
+      } else {
+        statusEl.textContent = "Not Logged In";
+        emailEl.textContent = "-";
+        uidEl.textContent = "-";
+      }
+    });
+  </script>
+
+</body>
+</html>

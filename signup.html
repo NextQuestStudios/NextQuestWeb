@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up – Next Quest Studio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <img src="assets/images/logo.png" class="logo" alt="Logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section dark" style="padding-top: 140px;">
+    <h1>Create Your Account</h1>
+    <form id="signupForm" class="auth-form">
+      <label for="signupEmail">Email</label>
+      <input type="email" id="signupEmail" name="email" required />
+
+      <label for="signupUsername">Username</label>
+      <input type="text" id="signupUsername" name="username" required />
+
+      <label for="signupPassword">Password</label>
+      <input type="password" id="signupPassword" name="password" required />
+
+      <div class="password-strength">
+        <div id="strengthBar">
+          <div id="strengthFill"></div>
+        </div>
+        <small id="strengthText">Password strength: -</small>
+      </div>
+
+      <label for="signupConfirmPassword">Confirm Password</label>
+      <input type="password" id="signupConfirmPassword" name="confirmPassword" required />
+
+      <button class="btn primary" type="submit">Sign Up</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Next Quest Studio</p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

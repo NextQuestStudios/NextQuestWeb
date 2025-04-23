@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support – Next Quest Studio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <img src="assets/images/logo.png" alt="Next Quest Studio Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="profile.html">My Profile</a></li>
+        <li id="adminNav" style="display:none;"><a href="admin/index.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section dark" style="padding-top: 140px;">
+    <h1>Support & FAQ</h1>
+    <p>Check out common questions or open a ticket below.</p>
+
+    <div class="news-card">
+      <h2>Frequently Asked Questions</h2>
+      <ul>
+        <li><strong>Q:</strong> How do I report a bug?<br><strong>A:</strong> Fill out the form below or email support@nextquest.studio</li><br>
+        <li><strong>Q:</strong> Can I join the beta?<br><strong>A:</strong> Apply via the <a href="join.html">Join</a> page.</li><br>
+        <li><strong>Q:</strong> Where can I donate?<br><strong>A:</strong> Visit the <a href="donate.html">Donate</a> page.</li>
+      </ul>
+    </div>
+
+    <div class="news-card" style="margin-top: 40px;">
+      <h2>Submit a Support Ticket</h2>
+      <form id="supportForm">
+        <label for="supportName">Your Name</label>
+        <input type="text" id="supportName" name="name" required />
+
+        <label for="supportEmail">Your Email</label>
+        <input type="email" id="supportEmail" name="email" required />
+
+        <label for="supportMessage">Describe Your Issue</label>
+        <textarea id="supportMessage" name="issue" rows="5" required></textarea>
+
+        <button class="btn primary" type="submit">Send Ticket</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Next Quest Studio</p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

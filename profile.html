@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile – Next Quest Studio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <img src="assets/images/logo.png" class="logo" alt="Logo" />
+    <nav>
+      <ul id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li id="adminNav" style="display: none;"><a href="admin/index.html">Admin</a></li>
+        <li><a href="#" id="logoutBtn">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section dark" style="padding-top: 140px;">
+    <h1>My Profile</h1>
+    <div class="news-card profile-card">
+      <p><strong>Email:</strong> <span id="userEmail">Loading...</span></p>
+      <p><strong>Username:</strong> <span id="userName">Loading...</span></p>
+
+      <label for="userBio"><strong>Bio:</strong></label><br>
+      <textarea id="userBio" rows="4" placeholder="Tell us about your journey..."></textarea><br><br>
+
+      <button id="saveProfileBtn" class="btn primary">Save Changes</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Next Quest Studio</p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
